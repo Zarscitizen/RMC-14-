@@ -6,8 +6,8 @@
   playTimeTracker: CMJobMilitaryPolice
   requirements:
   - !type:DepartmentTimeRequirement
-    department: CMSquad
-    time: 72000 # 20 hours
+    department: CMMP
+    time: 36000 # 10 hours
   ranks:
     RMCRankStaffSergeant:
     - !type:RoleTimeRequirement
