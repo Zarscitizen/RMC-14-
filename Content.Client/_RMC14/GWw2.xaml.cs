@@ -1,4 +1,4 @@
-public sealed partial class GhostWarpWindow
+public sealed partial class GhostWarpWindow;
 {
     private BoxContainer GroupContainer => GetChild<BoxContainer>("GroupContainer");
 
