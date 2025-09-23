@@ -1,27 +1,3 @@
-<Window xmlns="https://robust-toolbox.net/ui"
-        Title="Телепорт призрака"
-        Size="500,600"
-        CanClose="true"
-        CanResize="true">
-    <VBoxContainer Name="GroupContainer" />
-</Window>
-
-
-1
-
-<PanelContainer xmlns="https://robust-toolbox.net/ui"
-                StyleClasses="GhostWarpGroup">
-    <VBoxContainer Name="EntryContainer">
-        <Label Name="GroupLabel" />
-    </VBoxContainer>
-</PanelContainer>
-
-
-3
-
 <Button xmlns="https://robust-toolbox.net/ui"
         Name="TeleportButton"
         StyleClasses="GhostWarpEntry" />
-
-
-5
