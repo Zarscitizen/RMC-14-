@@ -1,0 +1,93 @@
+using Content.Client.UserInterface.Systems.GhostWarp.UI;
+using Robust.Client.Player;
+using Robust.Shared.GameObjects;
+using Robust.Shared.Input.Binding;
+using Robust.Shared.Timing;
+
+namespace Content.Client.RMC.GhostWarp;
+
+public sealed class GhostWarpSystem : EntitySystem
+{
+    public override void Initialize()
+    {
+        base.Initialize();
+        CommandBinds.Builder
+            .Bind("ghostwarp", InputCmdHandler.FromDelegate(_ => OpenWindow()))
+            .Register<GhostWarpSystem>();
+    }
+
+    private void OpenWindow()
+    {
+        var window = new GhostWarpWindow();
+        window.OpenCentered();
+
+        var players = EntityManager.GetEntities()
+            .Where(e => e.HasComponent<MindComponent>() && e != LocalPlayer?.ControlledEntity);
+
+        var grouped = GroupPlayers(players);
+
+        foreach (var (groupName, color, groupPlayers) in grouped)
+        {
+            window.AddGroup(groupName, color, groupPlayers);
+        }
+    }
+
+    private IEnumerable<(string Name, Color Color, List<EntityUid>)> GroupPlayers(IEnumerable<EntityUid> players)
+    {
+        var result = new List<(string, Color, List<EntityUid>)>();
+
+        var groups = new Dictionary<string, (Color, List<EntityUid>)>
+        {
+            { "Морпехи", (Color.Cyan, new()) },
+            { "Альфа", (Color.Red, new()) },
+            { "Браво", (Color.Yellow, new()) },
+            { "Чарли", (Color.Purple, new()) },
+            { "Дельта", (Color.Blue, new()) },
+            { "Другие", (Color.Green, new()) },
+            { "Ксеноморфы", (new Color(80, 0, 80), new()) },
+            { "Корпораты", (Color.Gray, new()) }
+        };
+
+        foreach (var player in players)
+        {
+            var name = MetaData(player).EntityName;
+            var group = DetermineGroup(player);
+
+            if (!groups.ContainsKey(group))
+                group = "Другие";
+
+            groups[group].Item2.Add(player);
+        }
+
+        foreach (var (name, (color, list)) in groups)
+        {
+            if (list.Count > 0)
+                result.Add((name, color, list));
+        }
+
+        return result;
+    }
+
+    private string DetermineGroup(EntityUid player)
+    {
+        if (HasComp<XenoComponent>(player))
+            return "Ксеноморфы";
+
+        if (HasComp<CorporateComponent>(player))
+            return "Корпораты";
+
+        if (TryComp<SquadTagComponent>(player, out var squad))
+        {
+            return squad.Tag switch
+            {
+                "Alpha" => "Альфа",
+                "Bravo" => "Браво",
+                "Charlie" => "Чарли",
+                "Delta" => "Дельта",
+                _ => "Морпехи"
+            };
+        }
+
+        return "Другие";
+    }
+}
