@@ -8,12 +8,12 @@ namespace Content.Client._RMC14;
 
 public sealed partial class GhostWarpGroup : PanelContainer
 {
-    private Label GroupLabel => FindChild<Label>("GroupLabel");
-    private BoxContainer EntryContainer => FindChild<BoxContainer>("EntryContainer");
+    private Label GroupLabel => GetChild<Label>("GroupLabel");
+    private BoxContainer EntryContainer => GetChild<BoxContainer>("EntryContainer");
 
     public GhostWarpGroup(string name, Color color)
     {
-        InitializeComponent();
+        RobustXamlLoader.Load(this);
         GroupLabel.Text = name;
         Modulate = color;
     }
