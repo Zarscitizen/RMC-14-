@@ -1,6 +1,7 @@
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.IoC;
+using Robust.Client.UserInterface.XAML;
 using Robust.Shared.GameObjects;
 using Robust.Client.Player;
 
@@ -10,7 +11,7 @@ public sealed partial class GhostWarpEntry : Button
 {
     public GhostWarpEntry(EntityUid target)
     {
-        InitializeComponent();
+        RobustXamlLoader.Load(this);
         Text = MetaData(target).EntityName;
 
         OnPressed += _ =>
