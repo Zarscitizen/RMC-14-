@@ -2,6 +2,6 @@
         Title="Телепорт призрака"
         Size="500,600"
         CanClose="true"
-        CanResize="true">
-    <VBoxContainer Name="GroupContainer" />
+        CanResize="true"
+    VBoxContainer Name="GroupContainer"
 </Window>
