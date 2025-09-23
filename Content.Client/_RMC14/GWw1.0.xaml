@@ -3,5 +3,5 @@
         Size="500,600"
         CanClose="true"
         CanResize="true">
-    <VBoxContainer Name="GroupContainer" />
+    <BoxContainer Name="GroupContainer" />
 </Window>
