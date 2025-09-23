@@ -9,7 +9,7 @@ namespace Content.Client._RMC14;
 public sealed partial class GhostWarpGroup : PanelContainer
 {
     private Label GroupLabel => FindChild<Label>("GroupLabel");
-    private VBoxContainer EntryContainer => FindChild<VBoxContainer>("EntryContainer");
+    private BoxContainer EntryContainer => FindChild<BoxContainer>("EntryContainer");
 
     public GhostWarpGroup(string name, Color color)
     {
