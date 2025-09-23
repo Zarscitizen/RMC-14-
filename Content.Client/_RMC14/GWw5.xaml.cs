@@ -1,3 +1,4 @@
-<Button xmlns="https://robust-toolbox.net/ui"
+{Button xmlns="https://robust-toolbox.net/ui"
         Name="TeleportButton"
-        StyleClasses="GhostWarpEntry" />
+        StyleClasses="GhostWarpEntry" 
+}
