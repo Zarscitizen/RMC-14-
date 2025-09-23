@@ -1,4 +1,10 @@
 {
+using Robust.Client.UserInterface;
+using Robust.Client.UserInterface.Controls;
+using Robust.Shared.IoC;
+
+namespace Content.Client._RMC14;
+    
     public GhostWarpEntry(EntityUid target)
     {
         Text = MetaData(target).EntityName;
