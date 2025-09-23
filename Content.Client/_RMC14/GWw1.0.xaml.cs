@@ -5,5 +5,5 @@ Window xmlns="https://robust-toolbox.net/ui";
         CanClose="true";
         CanResize="true";
     VBoxContainer Name="GroupContainer";
-Window
+Window;
 };
