@@ -1,6 +1,6 @@
-public sealed partial class GhostWarpWindow : Window
+public sealed partial class GhostWarpWindow
 {
-    private VBoxContainer GroupContainer => GetChild<VBoxContainer>("GroupContainer");
+    private BoxContainer GroupContainer => GetChild<BoxContainer>("GroupContainer");
 
     public void AddGroup(string name, Color color, List<EntityUid> players)
     {
