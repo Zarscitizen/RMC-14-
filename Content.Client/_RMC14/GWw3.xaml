@@ -1,6 +1,6 @@
 <PanelContainer xmlns="https://robust-toolbox.net/ui"
                 StyleClasses="GhostWarpGroup">
-    <VBoxContainer Name="EntryContainer">
+    <BoxContainer Name="EntryContainer">
         <Label Name="GroupLabel" />
     </BoxContainer>
 </PanelContainer>
