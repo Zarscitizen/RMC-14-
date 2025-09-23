@@ -2,5 +2,5 @@
                 StyleClasses="GhostWarpGroup">
     <VBoxContainer Name="EntryContainer">
         <Label Name="GroupLabel" />
-    </VBoxContainer>
+    </BoxContainer>
 </PanelContainer>
