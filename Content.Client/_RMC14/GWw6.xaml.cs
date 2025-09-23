@@ -1,4 +1,3 @@
-public sealed partial class GhostWarpEntry : Button
 {
     public GhostWarpEntry(EntityUid target)
     {
