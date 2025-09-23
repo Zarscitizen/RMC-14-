@@ -1,7 +1,0 @@
-<Window xmlns="https://robust-toolbox.net/ui"
-        Title="Телепорт призрака"
-        Size="500,600"
-        CanClose="true"
-        CanResize="true">
-    <VBoxContainer Name="GroupContainer" />
-</Window>
