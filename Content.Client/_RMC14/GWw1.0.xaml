@@ -1,7 +1,8 @@
-<Window xmlns="https://robust-toolbox.net/ui"
-        Title="Телепорт призрака"
-        Size="500,600"
-        CanClose="true"
-        CanResize="true">
+<DefaultWindow xmlns="https://robust-toolbox.net/ui"
+               xmlns:x="https://robust-toolbox.net/ui/xaml"
+               Title="Телепорт призрака"
+               Size="500,600"
+               CanClose="true"
+               CanResize="true">
     <BoxContainer Name="GroupContainer" />
-</Window>
+</DefaultWindow>
