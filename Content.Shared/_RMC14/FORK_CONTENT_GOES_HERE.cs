@@ -1,4 +1,5 @@
 // Shared/Components/RmcLifeStateComponent.cs
+{
 using Robust.Shared.GameObjects;
 
 namespace Content.Shared.RMC.Components;
@@ -11,6 +12,7 @@ public sealed partial class RmcLifeStateComponent : Component
 }
 // Shared/Components/RmcIdentityComponent.cs
 using Robust.Shared.GameObjects;
+}
 
 namespace Content.Shared.RMC.Components;
 
@@ -24,3 +26,4 @@ public sealed partial class RmcIdentityComponent : Component
     public bool IsNPC;                   // Пометка NPC
     public bool IsVehicle;               // Пометка транспортного средства
 }
+
