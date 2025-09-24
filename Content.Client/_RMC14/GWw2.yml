@@ -1,0 +1,11 @@
+CategoryPanelStyle:
+  bg_color: "#2E3A59"
+  border_color: "#4C5A7D"
+  border_width: 2
+  padding: 4
+
+SubCategoryStyle:
+  bg_color: "#3A4A6D"
+  border_color: "#5C6A8D"
+  border_width: 1
+  padding: 2
