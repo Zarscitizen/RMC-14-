@@ -1,8 +1,25 @@
-<DefaultWindow xmlns="https://robust-toolbox.net/ui"
-               xmlns:x="https://robust-toolbox.net/ui/xaml"
-               Title="Телепорт призрака"
-               Size="500,600"
-               CanClose="true"
-               CanResize="true">
-    <BoxContainer Name="GroupContainer" />
-</DefaultWindow>
+<VBoxContainer>
+  <!-- Заголовок категории -->
+  <PanelContainer CustomStyles="CategoryPanelStyle">
+    <HBoxContainer>
+      <Label Text="Marines (46)" />
+      <Button Text="▼" Name="ToggleButton" />
+    </HBoxContainer>
+  </PanelContainer>
+
+  <!-- Содержимое категории -->
+  <VBoxContainer Name="MarinesContent" Visible="true">
+    <PanelContainer CustomStyles="SubCategoryStyle">
+      <Label Text="Alpha (7)" />
+    </PanelContainer>
+    <PanelContainer CustomStyles="SubCategoryStyle">
+      <Label Text="Bravo (8)" />
+    </PanelContainer>
+    <PanelContainer CustomStyles="SubCategoryStyle">
+      <Label Text="Charlie (11)" />
+    </PanelContainer>
+    <PanelContainer CustomStyles="SubCategoryStyle">
+      <Label Text="Delta (9)" />
+    </PanelContainer>
+  </VBoxContainer>
+</VBoxContainer>
