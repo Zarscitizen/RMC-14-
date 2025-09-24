@@ -1,9 +1,0 @@
-// Client/UI/RmcRosterControl.xaml
-<?xml version="1.0" encoding="utf-8"?>
-<Control xmlns="https://robust-toolbox"
-         Name="RosterRoot"
-         VerticalExpand="True" HorizontalExpand="True">
-  <ScrollContainer VerticalExpand="True">
-    <VBox Name="CategoryList" Separation="4" />
-  </ScrollContainer>
-</Control>
